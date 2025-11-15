@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,15 +25,15 @@
         }
 
         header h2 {
-            font-size: 22px;
             color: #0066ff;
             margin: 0;
+            font-size: 22px;
         }
 
         nav a {
             margin-left: 30px;
-            text-decoration: none;
             color: #333;
+            text-decoration: none;
             font-weight: 500;
         }
 
@@ -41,64 +41,65 @@
             color: #0066ff;
         }
 
-        .pricing-section {
+        .section {
             padding: 60px 40px;
             text-align: center;
         }
 
-        .pricing-section h1 {
-            font-size: 38px;
+        .section h1 {
+            font-size: 40px;
+            font-weight: 700;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
-            padding: 0 20px;
         }
 
-        .plan {
+        .card {
             background: white;
-            padding: 35px;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            text-align: left;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
             border: 1px solid #eee;
+            text-align: left;
         }
 
-        .plan h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+        .card h2 {
+            margin: 0 0 15px;
+            font-size: 26px;
         }
 
         .price {
-            font-size: 30px;
+            font-size: 40px;
             font-weight: 700;
-            margin-bottom: 15px;
             color: #0066ff;
-        }
-
-        .plan ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        .plan li {
             margin-bottom: 10px;
-            color: #555;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 17px;
+            color: #444;
         }
 
         .btn-primary {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            padding: 14px;
             background: #0066ff;
             color: white;
-            border-radius: 6px;
+            padding: 14px 22px;
+            border-radius: 8px;
             text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+            text-align: center;
         }
 
         .btn-primary:hover {
@@ -128,53 +129,53 @@
     </nav>
 </header>
 
-<section class="pricing-section">
-    <h1>Simple, Transparent Pricing</h1>
-    <p>No contracts. Cancel anytime.</p>
+<section class="section">
+    <h1>Premium, White-Glove Installation</h1>
+    <p style="font-size:18px;color:#555;margin-top:-10px;">
+        Full setup, custom voice model, and long-term support for your business.
+    </p>
 
     <div class="pricing-grid">
-        
-        <div class="plan">
-            <h3>Starter</h3>
-            <p class="price">$49/mo</p>
+
+        <div class="card">
+            <h2>Premium Setup</h2>
+            <div class="price">$4,997</div>
+            <p style="color:#777;font-size:16px;margin-bottom:15px;">One-time installation</p>
+
             <ul>
-                <li>✔ 24/7 Call Answering</li>
-                <li>✔ Appointment Booking</li>
-                <li>✔ Basic AI Voice</li>
-                <li>✔ Email Notifications</li>
+                <li>✔ Custom AI voice setup & tuning</li>
+                <li>✔ Calendar + Telnyx integration</li>
+                <li>✔ Emergency & after-hours workflows</li>
+                <li>✔ Custom scripts & responses</li>
+                <li>✔ Staff training & live testing</li>
+                <li>✔ 30 days full optimization</li>
             </ul>
-            <a href="demo.html" class="btn-primary">Get Started</a>
+
+            <a href="demo.html" class="btn-primary">Start Setup</a>
         </div>
 
-        <div class="plan" style="border:2px solid #0066ff;">
-            <h3>Professional</h3>
-            <p class="price">$129/mo</p>
-            <ul>
-                <li>✔ Everything in Starter</li>
-                <li>✔ SMS Alerts</li>
-                <li>✔ Multi-Location Support</li>
-                <li>✔ Lead Qualification</li>
-            </ul>
-            <a href="demo.html" class="btn-primary">Popular Plan</a>
-        </div>
+        <div class="card">
+            <h2>Maintenance & Support</h2>
+            <div class="price">$500/month</div>
+            <p style="color:#777;font-size:16px;margin-bottom:15px;">Ongoing support</p>
 
-        <div class="plan">
-            <h3>Enterprise</h3>
-            <p class="price">Custom</p>
             <ul>
-                <li>✔ Full AI Customization</li>
-                <li>✔ Dedicated Support</li>
-                <li>✔ Custom Voice Models</li>
-                <li>✔ CRM Integration</li>
+                <li>✔ Monthly performance monitoring</li>
+                <li>✔ Script updates & improvements</li>
+                <li>✔ New service additions</li>
+                <li>✔ Emergency issue fixes</li>
+                <li>✔ Monthly reports</li>
+                <li>✔ Priority support</li>
             </ul>
-            <a href="contact.html" class="btn-primary">Contact Sales</a>
+
+            <a href="contact.html" class="btn-primary">Contact Support</a>
         </div>
 
     </div>
 </section>
 
 <footer>
-    © 2025 AI Receptionist. All Rights Reserved.
+    © 2025 AI Receptionist. All rights reserved.
 </footer>
 
 </body>
