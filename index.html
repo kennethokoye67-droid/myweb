@@ -1,277 +1,141 @@
-<!doctype html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ClinicVoice AI — 24/7 AI Receptionist for Dental Clinics</title>
-  <meta name="description" content="ClinicVoice AI installs a custom 24/7 AI receptionist for dental clinics. Stop losing new patients — book more appointments, handle emergencies, and reduce front-desk workload." />
-  <meta name="theme-color" content="#0b5565"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Receptionist – 24/7 Call Answering for All Businesses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f7fafc; --card:#ffffff; --accent:#0b5565; --muted:#6b7280; --accent-2:#0ea5a4;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .logo{display:flex;gap:12px;align-items:center}
-    .logo-mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-    nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:22px}
-    .eyebrow{color:var(--accent);font-weight:700;font-size:13px;margin-bottom:10px}
-    h1{font-size:34px;margin:0 0 14px}
-    p.lead{color:var(--muted);margin:0 0 20px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block}
-    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
-    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(12,34,56,0.06)}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-    .feature{background:linear-gradient(180deg,#fff,#fbfeff);padding:14px;border-radius:10px}
-    .how{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}
-    ul.check{padding-left:18px;color:var(--muted)}
-    .pricing{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0}
-    .price-card{flex:1;min-width:260px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#f8feff);box-shadow:0 6px 20px rgba(6,40,44,0.05)}
-    .price{font-size:28px;color:var(--accent);font-weight:800;margin:10px 0}
-    .faq{margin-top:6px}
-    footer{margin-top:40px;padding:30px 0;color:var(--muted);font-size:14px;border-top:1px solid #e6eef0}
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr; padding-bottom:8px}
-      .feature-grid{grid-template-columns:repeat(2,1fr)}
-      .how{grid-template-columns:1fr}
-    }
-    @media(max-width:560px){
-      .feature-grid{grid-template-columns:1fr}
-    }
-    .contact-form input,.contact-form textarea{width:100%;padding:10px;border:1px solid #e6eef0;border-radius:8px;margin-top:8px}
-    .muted{color:var(--muted)}
-    .kbd{background:#f1f5f9;padding:6px 8px;border-radius:6px;font-weight:600}
+    body { margin: 0; font-family: Inter, sans-serif; background: #f9fafb; color: #1a1a1a; }
+    header { background: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+    nav a { margin-left: 25px; text-decoration: none; color: #333; font-weight: 600; }
+    nav a:hover { color: #2563eb; }
+    .hero { padding: 80px 40px; text-align: center; background: #ffffff; }
+    .hero h1 { font-size: 44px; font-weight: 700; margin-bottom: 20px; }
+    .hero p { font-size: 18px; max-width: 700px; margin: auto; color: #555; }
+    .btn-primary { background: #2563eb; color: white; padding: 14px 28px; border-radius: 8px; display: inline-block; margin-top: 25px; font-size: 18px; text-decoration: none; }
+    .btn-primary:hover { background: #1e4fc5; }
+
+    .section { padding: 60px 40px; max-width: 1100px; margin: auto; }
+    .section h2 { font-size: 32px; margin-bottom: 20px; text-align: center; }
+
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 12px; border: 1px solid #e5e7eb; }
+    .card h3 { margin-top: 0; }
+
+    .industries { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .industry-box { background: white; padding: 20px; border-radius: 10px; border: 1px solid #ddd; }
+    .industry-box a { text-decoration: none; color: #2563eb; font-weight: 600; }
+
+    .footer { background: #111827; color: #d1d5db; text-align: center; padding: 30px; margin-top: 40px; }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">
-        <div class="logo-mark">CV</div>
-        <div>
-          <div style="font-weight:700">ClinicVoice AI</div>
-          <div style="font-size:13px;color:var(--muted);margin-top:2px">AI receptionist for dental clinics</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn" style="margin-left:16px">Book demo</a>
-      </nav>
-    </header>
 
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Stop missing new patients</div>
-        <h1>24/7 AI receptionist built for dental clinics — books patients, handles emergencies, and frees your front desk.</h1>
-        <p class="lead">ClinicVoice AI answers every call, qualifies leads, schedules appointments directly into your calendar and routes urgent cases to your on-call number. Install, integrate, train — and start seeing fewer missed calls in 7 days.</p>
+<header>
+  <div style="font-size: 22px; font-weight: 700;">AI Receptionist</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="industries.html">Industries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-        <div class="cta-row">
-          <a href="#contact" class="btn">Book a 15-min demo</a>
-          <a href="#pricing" class="btn ghost">View pricing</a>
-        </div>
+<!-- HERO SECTION -->
+<div class="hero">
+  <h1>24/7 AI Receptionist for All Local Businesses</h1>
+  <p>
+    Never miss a call again. Your AI receptionist answers instantly, books appointments,
+    qualifies leads, handles emergencies, and captures customers — day and night.
+  </p>
+  <a href="contact.html" class="btn-primary">Request a Demo</a>
+</div>
 
-        <div style="margin-top:18px" class="muted">Trusted by dental clinics • pilot available • white-glove onboarding</div>
+<!-- FEATURES -->
+<div class="section">
+  <h2>Why Businesses Choose Our AI Receptionist</h2>
+  <div class="features">
+    <div class="card">
+      <h3>☎️ 24/7 Instant Answering</h3>
+      <p>Never lose customers again. AI handles every call immediately, even after hours.</p>
+    </div>
 
-        <div style="margin-top:18px" class="card">
-          <strong>Quick benefits</strong>
-          <div style="display:flex;gap:12px;margin-top:12px">
-            <div style="flex:1">
-              <div style="font-weight:700">24/7 Coverage</div>
-              <div class="muted" style="font-size:13px">Never miss an after-hours lead.</div>
-            </div>
-            <div style="flex:1">
-              <div style="font-weight:700">Calendar Integration</div>
-              <div class="muted" style="font-size:13px">Works with Google Calendar, Dentrix, OpenDental & Calendly.</div>
-            </div>
-            <div style="flex:1">
-              <div style="font-weight:700">Emergency Routing</div>
-              <div class="muted" style="font-size:13px">Escalates urgent calls instantly to your on-call number.</div>
-            </div>
-          </div>
-        </div>
+    <div class="card">
+      <h3>📅 Appointment Booking</h3>
+      <p>Integrated with Google, iCloud, Outlook, Calendly, TidyCal, and more.</p>
+    </div>
 
-      </div>
+    <div class="card">
+      <h3>🎯 Lead Qualification</h3>
+      <p>Collects customer details, needs, urgency, budget, and routes hot leads.</p>
+    </div>
 
-      <div>
-        <div class="card">
-          <strong>Schedule a live demo</strong>
-          <p class="muted" style="margin:8px 0 0">See ClinicVoice AI answer sample calls and integrate with your calendar. No tech setup needed for demo.</p>
+    <div class="card">
+      <h3>⚠️ Emergency Routing</h3>
+      <p>Critical calls are instantly forwarded to the right person.</p>
+    </div>
 
-          <form id="demoForm" class="contact-form" onsubmit="event.preventDefault();alert('Demo request sent — we will contact you');">
-            <label style="display:block;margin-top:10px;font-weight:700">Clinic name</label>
-            <input required placeholder="e.g., Parkside Dental" id="clinic" />
+    <div class="card">
+      <h3>💬 Custom AI Voice</h3>
+      <p>A friendly, natural voice customized to your brand and business tone.</p>
+    </div>
 
-            <label style="display:block;margin-top:8px;font-weight:700">Your name</label>
-            <input required placeholder="Your full name" id="name" />
-
-            <label style="display:block;margin-top:8px;font-weight:700">Phone</label>
-            <input required placeholder="+1 (416) 555-1234" id="phone" />
-
-            <label style="display:block;margin-top:8px;font-weight:700">Email</label>
-            <input required placeholder="you@clinic.com" id="email" />
-
-            <button class="btn" style="width:100%;margin-top:12px">Request Demo</button>
-            <div style="font-size:13px;color:var(--muted);margin-top:10px">We’ll respond within one business day. Or call <span class="kbd">(416) 928-9090</span>.</div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section style="margin-top:28px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
-        <div style="flex:1">
-          <h2 style="margin:0 0 8px">Why dental clinics choose ClinicVoice AI</h2>
-          <p class="muted" style="margin:0">We combine clinical workflows with modern voice AI — so your patients get fast, correct answers and your team only handles real patients.</p>
-          <div class="feature-grid" style="margin-top:16px">
-            <div class="feature"><strong>Custom scripts</strong><div class="muted" style="font-size:13px">Trained on your services, FAQs, insurance & policies.</div></div>
-            <div class="feature"><strong>Call transcription</strong><div class="muted" style="font-size:13px">Get full call transcripts and summaries by email or SMS.</div></div>
-            <div class="feature"><strong>Calendar sync</strong><div class="muted" style="font-size:13px">Two-way sync with Google Calendar, Dentrix, OpenDental.</div></div>
-            <div class="feature"><strong>Emergency handling</strong><div class="muted" style="font-size:13px">Escalate urgent cases to on-call numbers instantly.</div></div>
-            <div class="feature"><strong>After-hours & overflow</strong><div class="muted" style="font-size:13px">Fill gaps and reduce missed calls 24/7.</div></div>
-            <div class="feature"><strong>HIPAA-aware workflows</strong><div class="muted" style="font-size:13px">We capture only necessary contact info; clinical triage is escalated.</div></div>
-          </div>
-        </div>
-        <div style="width:320px">
-          <div class="card">
-            <strong>Fast setup</strong>
-            <div class="muted" style="font-size:13px;margin-top:8px">Install, integrate, test — live in 7–10 days. White-glove onboarding and staff training included.</div>
-            <div style="margin-top:12px;font-weight:700">What we need</div>
-            <ul class="check">
-              <li>Clinic hours & services</li>
-              <li>On-call number</li>
-              <li>Calendar access (view or API)</li>
-              <li>Basic FAQs & cancellation policy</li>
-            </ul>
-            <a href="#contact" class="btn" style="margin-top:12px;display:block;text-align:center">Get started</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="how">
-      <div class="card">
-        <h3 style="margin:4px 0 8px">How ClinicVoice AI works — 3 steps</h3>
-        <ol style="padding-left:18px;color:var(--muted)">
-          <li><strong>Install & integrate</strong> — we connect your Telnyx number (or forward your number), sync calendar, and configure your scripts.</li>
-          <li><strong>Train & test</strong> — we customize the system prompt with your services, FAQs and emergency rules, then run live tests.</li>
-          <li><strong>Go live & optimize</strong> — we monitor calls, tune prompts, and send weekly reports. Ongoing support included.</li>
-        </ol>
-      </div>
-
-      <div class="card">
-        <h3 style="margin:4px 0 8px">Who this is for</h3>
-        <p class="muted">Dental clinics that want to:</p>
-        <ul class="check">
-          <li>Increase new patient bookings</li>
-          <li>Reduce missed calls and voicemail leads</li>
-          <li>Lower front-desk pressure and overtime</li>
-          <li>Ensure urgent cases are routed correctly</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="pricing" style="margin-top:18px">
-      <h2>Pricing</h2>
-      <p class="muted" style="margin:6px 0 14px">Transparent pricing for clinics that want a premium, white-glove installation.</p>
-
-      <div class="pricing">
-        <div class="price-card">
-          <div style="font-weight:700">Premium Setup</div>
-          <div class="price">$4,997</div>
-          <div class="muted">One-time custom installation</div>
-          <ul class="check" style="margin-top:10px">
-            <li>Custom voice agent & system prompt</li>
-            <li>Calendar & Telnyx integration</li>
-            <li>Emergency & after-hours workflows</li>
-            <li>Staff training & live testing</li>
-            <li>30 days optimization</li>
-          </ul>
-        </div>
-
-        <div class="price-card">
-          <div style="font-weight:700">Maintenance & Support</div>
-          <div class="price">$500 / month</div>
-          <div class="muted">Monitoring, updates, and priority support</div>
-          <ul class="check" style="margin-top:10px">
-            <li>Monthly performance reports</li>
-            <li>Prompt tuning & new FAQ updates</li>
-            <li>Emergency fixes</li>
-            <li>New service additions (included)</li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="margin-top:12px" class="muted"><strong>Pilot:</strong> 7-day trial available for qualified clinics. Ask about our ROI case study during your demo.</div>
-    </section>
-
-    <section id="faq" style="margin-top:20px">
-      <h2>Frequently asked questions</h2>
-      <div class="faq">
-        <details style="margin-top:8px"><summary style="font-weight:700;cursor:pointer">Will this replace our receptionist?</summary>
-          <div class="muted" style="margin-top:8px">No — it handles overflow and after-hours. Your receptionist keeps full control of in-office calls and patient care.</div>
-        </details>
-
-        <details style="margin-top:8px"><summary style="font-weight:700;cursor:pointer">How do you handle emergencies?</summary>
-          <div class="muted" style="margin-top:8px">We configure an emergency workflow that routes urgent calls to your on-call number and flags the call as high priority in summaries.</div>
-        </details>
-
-        <details style="margin-top:8px"><summary style="font-weight:700;cursor:pointer">Which calendars do you support?</summary>
-          <div class="muted" style="margin-top:8px">Google Calendar, Calendly, Dentrix, OpenDental. We can add custom integrations via webhook or API.</div>
-        </details>
-
-        <details style="margin-top:8px"><summary style="font-weight:700;cursor:pointer">Do you record calls and transcripts?</summary>
-          <div class="muted" style="margin-top:8px">Yes — call recordings and transcripts are available. We capture only necessary info and follow privacy guidelines.</div>
-        </details>
-
-        <details style="margin-top:8px"><summary style="font-weight:700;cursor:pointer">What is required to start?</summary>
-          <div class="muted" style="margin-top:8px">Clinic hours, on-call number, calendar access, and a short FAQ list. We handle the rest.</div>
-        </details>
-      </div>
-    </section>
-
-    <section id="contact" style="margin-top:20px">
-      <h2>Contact & demo</h2>
-      <div class="card">
-        <p class="muted">Ready to book a demo? Fill the form or email <strong>hello@clinicvoice.ai</strong> (placeholder) — we’ll respond within one business day.</p>
-
-        <form onsubmit="event.preventDefault();alert('Thanks — demo request received. We will contact you.');" class="contact-form" style="margin-top:12px">
-          <label style="font-weight:700">Clinic name</label>
-          <input required placeholder="Parkside Dental" />
-          <label style="font-weight:700;margin-top:8px">Your name</label>
-          <input required placeholder="Dr. Sam" />
-          <label style="font-weight:700;margin-top:8px">Phone</label>
-          <input required placeholder="+1 (416) 555-1234" />
-          <label style="font-weight:700;margin-top:8px">Email</label>
-          <input required placeholder="you@clinic.com" />
-          <label style="font-weight:700;margin-top:8px">Message (optional)</label>
-          <textarea rows="3" placeholder="Best times to call, special requests..."></textarea>
-          <button class="btn" style="margin-top:10px">Request demo</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div>
-          <div style="font-weight:700">ClinicVoice AI</div>
-          <div class="muted" style="margin-top:6px">AI receptionist for dental clinics • 24/7 coverage • Telnyx + VAPI integrations</div>
-        </div>
-        <div class="muted" style="text-align:right">
-          <div>Phone: (416) 928-9090 (demo)</div>
-          <div style="margin-top:6px">Email: hello@clinicvoice.ai</div>
-        </div>
-      </div>
-    </footer>
-
+    <div class="card">
+      <h3>🧾 Call Transcripts</h3>
+      <p>Full call logs, transcripts, and notifications delivered instantly.</p>
+    </div>
   </div>
+</div>
+
+<!-- INDUSTRIES SECTION -->
+<div class="section">
+  <h2>Industries We Support</h2>
+
+  <div class="industries">
+    <div class="industry-box">
+      <h3>Dental & Medical Clinics</h3>
+      <p>Patient intake, booking, emergencies.</p>
+      <a href="industries.html">Learn More →</a>
+    </div>
+
+    <div class="industry-box">
+      <h3>Car Dealerships</h3>
+      <p>Test drives, sales inquiries, lead routing.</p>
+      <a href="dealerships.html">Learn More →</a>
+    </div>
+
+    <div class="industry-box">
+      <h3>Local Businesses</h3>
+      <p>Salons, gyms, repairs, home services, tutoring, and more.</p>
+      <a href="local-business.html">Learn More →</a>
+    </div>
+
+    <div class="industry-box">
+      <h3>Restaurants</h3>
+      <p>Reservations, catering inquiries, booking events.</p>
+    </div>
+
+    <div class="industry-box">
+      <h3>Real Estate</h3>
+      <p>Showings, rental screening, lead qualification.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="hero" style="background:#eef2ff;">
+  <h1>Ready to Automate Your Front Desk?</h1>
+  <p>Get your AI receptionist fully set up — fast, secure, and personalized for your business.</p>
+  <a href="contact.html" class="btn-primary">Book a Demo</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2025 AI Receptionist — All Rights Reserved
+</div>
+
 </body>
 </html>
