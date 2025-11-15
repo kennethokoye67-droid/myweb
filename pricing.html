@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — AI Receptionist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: #f7f8fa;
+        }
+
+        header {
+            background: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+        }
+
+        header h2 {
+            font-size: 22px;
+            color: #0066ff;
+            margin: 0;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #0066ff;
+        }
+
+        .pricing-section {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .pricing-section h1 {
+            font-size: 38px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .plan {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            text-align: left;
+            border: 1px solid #eee;
+        }
+
+        .plan h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #0066ff;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .plan li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .btn-primary {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 14px;
+            background: #0066ff;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: #004dcc;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #111;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>AI Receptionist</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="pricing-section">
+    <h1>Simple, Transparent Pricing</h1>
+    <p>No contracts. Cancel anytime.</p>
+
+    <div class="pricing-grid">
+        
+        <div class="plan">
+            <h3>Starter</h3>
+            <p class="price">$49/mo</p>
+            <ul>
+                <li>✔ 24/7 Call Answering</li>
+                <li>✔ Appointment Booking</li>
+                <li>✔ Basic AI Voice</li>
+                <li>✔ Email Notifications</li>
+            </ul>
+            <a href="demo.html" class="btn-primary">Get Started</a>
+        </div>
+
+        <div class="plan" style="border:2px solid #0066ff;">
+            <h3>Professional</h3>
+            <p class="price">$129/mo</p>
+            <ul>
+                <li>✔ Everything in Starter</li>
+                <li>✔ SMS Alerts</li>
+                <li>✔ Multi-Location Support</li>
+                <li>✔ Lead Qualification</li>
+            </ul>
+            <a href="demo.html" class="btn-primary">Popular Plan</a>
+        </div>
+
+        <div class="plan">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <ul>
+                <li>✔ Full AI Customization</li>
+                <li>✔ Dedicated Support</li>
+                <li>✔ Custom Voice Models</li>
+                <li>✔ CRM Integration</li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Contact Sales</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 AI Receptionist. All Rights Reserved.
+</footer>
+
+</body>
+</html>
