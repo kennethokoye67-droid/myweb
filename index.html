@@ -124,38 +124,110 @@
     </div>
   </div>
 </div>
-</div>
-</div>
-
-<!-- ⭐ GOOGLE REVIEWS SECTION ⭐ -->
-<section style="background:white; padding:60px 20px; text-align:center; margin-top:40px;">
-    <h2 style="font-size:32px; margin-bottom:15px;">What Our Clients Are Saying</h2>
-    <p style="max-width:700px; margin:0 auto 40px; color:#555;">
-        Real reviews from businesses using our AI Receptionist.
+<!-- ⭐ GOOGLE REVIEWS CAROUSEL ⭐ -->
+<section class="reviews-section" style="background:white; padding:70px 20px;">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:10px; color:#333;">
+        What Our Clients Are Saying
+    </h2>
+    <p style="text-align:center; font-size:18px; color:#555; margin-bottom:40px;">
+        Real businesses using our AI Receptionist
     </p>
 
-    <div style="max-width:700px; margin:0 auto; text-align:left;">
-        <div style="border-bottom:1px solid #ddd; padding:20px 0;">
-            ⭐⭐⭐⭐⭐  
-            <p>"We stopped missing calls and booked more appointments the same week."</p>
-            <strong>— Sarah, Dental Clinic</strong>
+    <div class="carousel-container">
+        <div class="review-card active">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"We've stopped missing calls and booked more appointments this month than ever!"</p>
+            <strong>- Sarah, Dental Clinic Owner</strong>
         </div>
 
-        <div style="border-bottom:1px solid #ddd; padding:20px 0;">
-            ⭐⭐⭐⭐⭐  
-            <p>"The AI sounds real. My customers think it's a human receptionist."</p>
-            <strong>— Mark, Real Estate Agent</strong>
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"The AI sounds so real. My clients think it's a human receptionist."</p>
+            <strong>- Mark, Real Estate Agent</strong>
         </div>
 
-        <div style="padding:20px 0;">
-            ⭐⭐⭐⭐⭐  
-            <p>"Best investment we made. 24/7 answering without hiring staff."</p>
-            <strong>— Jennifer, Spa Owner</strong>
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Best investment we made. 24/7 answering without hiring staff!"</p>
+            <strong>- Jennifer, Spa Owner</strong>
         </div>
+    </div>
+
+    <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
 </section>
 
-<!-- CTA -->
+<!-- ⭐ CAROUSEL SCRIPT ⭐ -->
+<script>
+let index = 0;
+const reviews = document.querySelectorAll(".review-card");
+const dots = document.querySelectorAll(".dot");
+
+function showReview(i) {
+    reviews.forEach((card, n) => {
+        card.style.display = (n === i) ? "block" : "none";
+        dots[n].classList.toggle("active", n === i);
+    });
+}
+
+function nextReview() {
+    index = (index + 1) % reviews.length;
+    showReview(index);
+}
+
+setInterval(nextReview, 4000); // Auto-slide every 4 seconds
+showReview(index);
+</script>
+
+<!-- ⭐ CAROUSEL STYLE ⭐ -->
+<style>
+.carousel-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.review-card {
+    display: none;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+.review-card.active {
+    display: block;
+}
+
+.stars {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    display: inline-block;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #333;
+}
+</style>
 
 <!-- CTA -->
 <div class="hero" style="background:#eef2ff;">
