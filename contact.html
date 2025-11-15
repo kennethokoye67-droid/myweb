@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | AI Receptionist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – AI Receptionist</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body { margin: 0; font-family: Inter, sans-serif; background: #f9fafb; }
-    header { background: white; padding: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
-    nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: 600; }
-    .container { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; border: 1px solid #ddd; }
-    input, textarea { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #bbb; }
-    button { padding: 12px 20px; background: #2563eb; color: white; border: none; border-radius: 8px; margin-top: 20px; cursor: pointer; font-size: 16px; }
+    body { font-family: Inter, sans-serif; margin:0; background:#f9fafb; color:#1a1a1a; }
+    header { padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:white; border-bottom:1px solid #eee; }
+    nav a { margin-left:20px; text-decoration:none; font-weight:600; color:#333; }
+    nav a:hover { color:#2563eb; }
+
+    .container { max-width:600px; background:white; padding:30px; border-radius:10px; margin:50px auto; border:1px solid #ddd; }
+    input, textarea { width:100%; padding:12px; margin-top:10px; border-radius:8px; border:1px solid #bbb; font-size:16px; }
+    button { width:100%; padding:14px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer; font-size:17px; font-weight:600; margin-top:20px; }
+    button:hover { background:#1e4fc5; }
+
+    .footer { background:#111827; color:#d1d5db; text-align:center; padding:25px; margin-top:50px; }
   </style>
 </head>
 
 <body>
 
 <header>
-  <div style="font-weight: 700; font-size: 20px;">AI Receptionist</div>
+  <div style="font-size:22px; font-weight:700;">AI Receptionist</div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
     <a href="how-it-works.html">How it works</a>
+    <a href="pricing.html">Pricing</a>
     <a href="industries.html">Industries</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
   </nav>
 </header>
 
 <div class="container">
   <h1>Contact Us</h1>
-  <p>Request a demo, ask a question, or get started with AI Receptionist for your business.</p>
+  <p>Have questions? Want a demo? Fill out the form and we'll reach out.</p>
 
   <form>
     <label>Your Name</label>
     <input type="text" placeholder="John Doe">
 
-    <label>Your Email</label>
+    <label>Email</label>
     <input type="email" placeholder="you@example.com">
 
     <label>Business Name</label>
     <input type="text" placeholder="Your Business">
 
     <label>Message</label>
-    <textarea rows="5" placeholder="Tell us what you need..."></textarea>
+    <textarea rows="5" placeholder="Tell us how we can help..."></textarea>
 
     <button>Send Message</button>
   </form>
+</div>
+
+<div class="footer">
+  © 2025 AI Receptionist – All Rights Reserved
 </div>
 
 </body>
